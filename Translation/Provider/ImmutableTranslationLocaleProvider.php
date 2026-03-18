@@ -15,15 +15,8 @@ namespace Sylius\Component\Resource\Translation\Provider;
 
 final class ImmutableTranslationLocaleProvider implements TranslationLocaleProviderInterface
 {
-    /** @var array */
-    private $definedLocalesCodes;
-
-    private string $defaultLocaleCode;
-
-    public function __construct(array $definedLocalesCodes, string $defaultLocaleCode)
+    public function __construct(private array $definedLocalesCodes, private string $defaultLocaleCode)
     {
-        $this->definedLocalesCodes = $definedLocalesCodes;
-        $this->defaultLocaleCode = $defaultLocaleCode;
     }
 
     public function getDefinedLocalesCodes(): array

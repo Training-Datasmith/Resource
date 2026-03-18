@@ -19,17 +19,15 @@ namespace Sylius\Component\Resource\Factory;
 final class Factory implements FactoryInterface
 {
     /**
-     * @var string
-     * @psalm-var class-string
-     */
-    private $className;
-
-    /**
      * @psalm-param class-string $className
      */
-    public function __construct(string $className)
+    public function __construct(
+        /**
+         * @psalm-var class-string
+         */
+        private string $className
+    )
     {
-        $this->className = $className;
     }
 
     public function createNew()
