@@ -26,8 +26,7 @@ final class Factory implements FactoryInterface
          * @psalm-var class-string
          */
         private string $className
-    )
-    {
+    ) {
     }
 
     public function createNew()
